@@ -1,0 +1,31 @@
+name: daily-reports
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install requests python-dotenv
+      - name: Run scripts
+        env:
+          HUBSPOT_ACCESS_TOKEN: ${{ secrets.HUBSPOT_ACCESS_TOKEN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        run: |
+          mkdir -p reports/daily
+          python3 scripts/fetch_leads.py
+          python3 scripts/audit_supabase.py || true
+      - name: Commit
+        run: |
+          git config user.name "clara-bot"
+          git config user.email "clara@voxcia.io"
+          git add reports/
+          git commit -m "chore: daily reports update" || exit 0
+          git push
