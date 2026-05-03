@@ -1,0 +1,4 @@
+# CODEOWNERS for Voxcia skills
+/.github/ @claravoxcia-bot
+/skills/ @claravoxcia-bot
+/playbooks/ @claravoxcia-bot
