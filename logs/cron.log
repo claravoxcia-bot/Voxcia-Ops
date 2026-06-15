@@ -376,3 +376,16 @@ python-dotenv could not parse statement starting at line 87
 python-dotenv could not parse statement starting at line 88
 🔍 Conectando ao projeto: https://gusrpxwocwpbnvkqlwep.supabase.co
 ❌ Falha na auditoria: HTTPSConnectionPool(host='gusrpxwocwpbnvkqlwep.supabase.co', port=443): Max retries exceeded with url: /rest/v1/leads?select=email (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7ff7c0877250>: Failed to resolve 'gusrpxwocwpbnvkqlwep.supabase.co' ([Errno -2] Name or service not known)"))
+python-dotenv could not parse statement starting at line 48
+python-dotenv could not parse statement starting at line 49
+python-dotenv could not parse statement starting at line 73
+python-dotenv could not parse statement starting at line 87
+python-dotenv could not parse statement starting at line 88
+✅ Gerado: /root/Voxcia-Ops/reports/daily/2026-06-15_leads.md
+python-dotenv could not parse statement starting at line 48
+python-dotenv could not parse statement starting at line 49
+python-dotenv could not parse statement starting at line 73
+python-dotenv could not parse statement starting at line 87
+python-dotenv could not parse statement starting at line 88
+🔍 Conectando ao projeto: https://gusrpxwocwpbnvkqlwep.supabase.co
+❌ Falha na auditoria: HTTPSConnectionPool(host='gusrpxwocwpbnvkqlwep.supabase.co', port=443): Max retries exceeded with url: /rest/v1/leads?select=email (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fae15da3250>: Failed to resolve 'gusrpxwocwpbnvkqlwep.supabase.co' ([Errno -2] Name or service not known)"))
